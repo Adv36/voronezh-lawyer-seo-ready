@@ -1,0 +1,212 @@
+diff --git a/public/yandex_f1fddb69b9ebd6ba.html b/public/yandex_f1fddb69b9ebd6ba.html
+new file mode 100644
+index 0000000..a1b2c3d
+--- /dev/null
++++ b/public/yandex_f1fddb69b9ebd6ba.html
+@@ -0,0 +1,5 @@
++<html>
++    <head>
++        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
++    </head>
++    <body>Verification: f1fddb69b9ebd6ba</body>
++</html>
+diff --git a/public/googlebe2d8761443ffd45.html b/public/googlebe2d8761443ffd45.html
+new file mode 100644
+index 0000000..e4f5g6h
+--- /dev/null
++++ b/public/googlebe2d8761443ffd45.html
+@@ -0,0 +1 @@
++google-site-verification: googlebe2d8761443ffd45.html
+diff --git a/public/sitemap.xml b/public/sitemap.xml
+new file mode 100644
+index 0000000..i7j8k9l
+--- /dev/null
++++ b/public/sitemap.xml
+@@ -0,0 +1,25 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
++  <url><loc>https://xn--80aaebjeh9avjags2b.xn--p1ai/</loc><lastmod>2025-11-05</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
++  <url><loc>https://xn--80aaebjeh9avjags2b.xn--p1ai/services</loc><lastmod>2025-11-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
++  <url><loc>https://xn--80aaebjeh9avjags2b.xn--p1ai/price</loc><lastmod>2025-11-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
++  <url><loc>https://xn--80aaebjeh9avjags2b.xn--p1ai/practice</loc><lastmod>2025-11-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
++  <url><loc>https://xn--80aaebjeh9avjags2b.xn--p1ai/helpful</loc><lastmod>2025-11-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
++  <url><loc>https://xn--80aaebjeh9avjags2b.xn--p1ai/contact</loc><lastmod>2025-11-05</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
++</urlset>
+diff --git a/src/app/layout.tsx b/src/app/layout.tsx
+index m1n2o3p..q4r5s6t 100644
+--- a/src/app/layout.tsx
++++ b/src/app/layout.tsx
+@@ -1,10 +1,15 @@
+ import './globals.css';
+ import type { Metadata } from 'next';
+ import { Inter } from 'next/font/google';
++import Script from 'next/script';
+ 
+ const inter = Inter({ subsets: ['latin', 'cyrillic'] });
+ 
+ export const metadata: Metadata = {
+   title: 'Адвокат по уголовным делам в Воронеже — воронежадвокат',
+   description: 'Официальный сайт',
++  keywords: '',
+ };
+ 
+ export default function RootLayout({
+@@ -15,6 +20,20 @@ export default function RootLayout({
+ }) {
+   return (
+     <html lang="ru">
++      <head>
++        <link rel="icon" href="/favicon.ico" />
++        <Script id="yandex-metrika" strategy="afterInteractive">
++          {`
++            (function(m,e,t,r,i,k,a){
++                m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
++                m[i].l=1*new Date();
++                k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
++            })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
++            ym(100540078, 'init', {webvisor:true, clickmap:true, accurateTrackBounce:true, trackLinks:true});
++          `}
++        </Script>
++        <noscript><div><img src="https://mc.yandex.ru/watch/100540078" style={{position:'absolute',left:'-9999px'}} alt="" /></div></noscript>
++      </head>
+       <body className={inter.className}>{children}</body>
+     </html>
+   );
+diff --git a/src/app/page.tsx b/src/app/page.tsx
+index u7v8w9x..y1z2a3b 100644
+--- a/src/app/page.tsx
++++ b/src/app/page.tsx
+@@ -1,5 +1,15 @@
++import Image from 'next/image';
++
++export const metadata = {
++  title: 'Адвокат по уголовным делам в Воронеже для физических и юридических лиц: участие в процессах судопроизводства - воронежадвокат',
++  description: 'Официальный сайт адвоката по уголовным делам в Воронеже: широкий перечень услуг по участию в процессе уголовного судопроизводства - воронежадвокат. Звоните 📞: +7 (908) 132-88-66',
++  keywords: '',
++};
++
+ export default function Home() {
+   return (
++    <main className="container py-12">
++      {/* Обо мне с фото */}
++      <div className="flex flex-col md:flex-row gap-8 items-center mb-16">
++        <Image src="/uploads/ripinskiys_215_auto_jpg_5_100.jpg" width={250} height={250} alt="Адвокат" className="rounded-lg border" />
++        <div><h1 className="text-3xl font-bold">Адвокат по уголовным делам в Воронеже</h1><p>...текст...</p></div>
++      </div>
++
++      {/* Схема работы */}
++      <div className="grid grid-cols-1 md:grid-cols-7 gap-4 mb-16">
++        {[1,2,3,4,5,6,7].map(i => (
++          <div key={i} className="text-center p-3 border rounded text-sm">
++            <div className="font-bold">{i}</div>
++            <div>{['Консультация','Анализ','Стратегия','Досудебка','Суд','Апелляция','Поддержка'][i-1]}</div>
++          </div>
++        ))}
++      </div>
++
++      {/* Услуги БЕЗ кнопок "Подробнее" */}
++      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
++        {['Защита по УК РФ','Представительство','Обжалование'].map((s,i) => (
++          <div key={i} className="p-4 border rounded"><h3 className="font-bold">{s}</h3><p>Описание...</p></div>
++        ))}
++      </div>
++    </main>
+   );
+ }
+diff --git a/src/app/contact/page.tsx b/src/app/contact/page.tsx
+new file mode 100644
+index 0000000..c4d5e6f
+--- /dev/null
++++ b/src/app/contact/page.tsx
+@@ -0,0 +1,45 @@
++import Script from 'next/script';
++
++export const metadata = {
++  title: 'Контакты — воронежадвокат',
++  description: 'Контактная информация адвоката по уголовным делам в Воронеже. Офис, телефон, WhatsApp, Telegram.',
++};
++
++export default function ContactPage() {
++  return (
++    <div className="container py-12">
++      <h1 className="text-3xl font-bold mb-8">Контакты</h1>
++      
++      <div className="space-y-4 mb-8 max-w-lg">
++        <p><strong>Адрес:</strong> г. Воронеж, ул. Фридриха Энгельса, дом 48</p>
++        <p><strong>Телефон:</strong> <a href="tel:+79081328866">+7 (908) 132-88-66</a></p>
++        <p><strong>WhatsApp:</strong> <a href="https://wa.me/79081328866" target="_blank" rel="noopener">Написать</a></p>
++        <p><strong>Telegram:</strong> <a href="https://t.me/+79081328866" target="_blank" rel="noopener">Написать</a></p>
++        <p><strong>Email:</strong> <a href="mailto:advokat@xn--80aaebjeh9avjags2b.xn--p1ai">advokat@xn--80aaebjeh9avjags2b.xn--p1ai</a></p>
++      </div>
++
++      <div id="ymap" style={{ width: '100%', height: '400px', borderRadius: '8px' }}></div>
++
++      <Script id="ymap-script" strategy="afterInteractive">
++        {`
++          function init() {
++            var myMap = new ymaps.Map('ymap', { center: [51.6725, 39.1880], zoom: 16 });
++            var placemark = new ymaps.Placemark([51.6725, 39.1880], { balloonContent: 'г. Воронеж, ул. Фридриха Энгельса, д. 48' });
++            myMap.geoObjects.add(placemark);
++          }
++          ymaps.ready(init);
++        `}
++      </Script>
++      <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" async></script>
++    </div>
++  );
++}
+diff --git a/src/app/price/page.tsx b/src/app/price/page.tsx
+index g7h8i9j..k1l2m3n 100644
+--- a/src/app/price/page.tsx
++++ b/src/app/price/page.tsx
+@@ -1,5 +1,15 @@
++export const metadata = {
++  title: 'Сколько стоят услуги адвоката по уголовным делам в Воронеже: узнать стоимость на сайте воронежадвокат',
++  description: 'Узнайте, сколько стоят услуги адвоката по уголовным делам в Воронеже: стоимость указана на официальном сайте воронежадвокат. Звоните 📞: +7 (908) 132-88-66',
++  keywords: '',
++};
++
+ export default function PricePage() {
+   return (
++    <div className="container py-12">
++      <h1 className="text-3xl font-bold mb-8">Цены</h1>
++      
++      <div className="bg-blue-50 p-6 rounded mb-8">
++        <h2>Индивидуальный подход к каждому клиенту</h2>
++        <a href="https://t.me/+79081328866" target="_blank" rel="noopener" className="inline-block bg-blue-600 text-white px-4 py-2 rounded">
++          Получить консультацию
++        </a>
++      </div>
++    </div>
+   );
+ }
+diff --git a/src/app/helpful/page.tsx b/src/app/helpful/page.tsx
+index o4p5q6r..s7t8u9v 100644
+--- a/src/app/helpful/page.tsx
++++ b/src/app/helpful/page.tsx
+@@ -1,5 +1,15 @@
++export const metadata = {
++  title: 'Полезные ссылки на юридические источники на сайте воронежадвокат',
++  description: 'Перечень полезных юридических источников на сайте воронежадвокат. Звоните 📞: +7 (908) 132-88-66',
++  keywords: '',
++};
++
++const links = [
++  { title: 'Конституция РФ', url: 'https://www.consultant.ru/document/cons_doc_LAW_28399/' },
++  { title: 'УК РФ', url: 'https://www.consultant.ru/document/cons_doc_LAW_10699/' },
++];
++
+ export default function HelpfulPage() {
+   return (
++    <div className="container py-12">
++      <h1 className="text-3xl font-bold mb-8">Полезное</h1>
++      <ul>
++        {links.map((link, i) => (
++          <li key={i} className="mb-2">
++            <a href={link.url} target="_blank" rel="nofollow noopener" className="text-blue-600">{link.title}</a>
++          </li>
++        ))}
++      </ul>
++    </div>
+   );
+ }

@@ -1,0 +1,28 @@
+[build]
+  command = "next build"
+  publish = ".next"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+
+# Remote image configuration
+[images]
+  remote_images = [
+    "https://ext.same-assets.com/.*",
+    "https://1334220929.same-assets.com/.*",
+    "https://615341754.same-assets.com/.*"
+  ]
+
+[build.environment]
+  NEXT_PUBLIC_SITE_URL = "https://воронежадвокат.рф"
+
+[[plugins]]
+package = "@netlify/plugin-nextjs"
