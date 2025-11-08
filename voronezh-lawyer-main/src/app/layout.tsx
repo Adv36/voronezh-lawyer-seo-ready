@@ -5,7 +5,7 @@ import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin', 'cyrillic'] });
 
-export const metadata: Metadata = {
+export const meta Metadata = {
   title: 'Адвокат по уголовным делам в Воронеже — воронежадвокат',
   description: 'Официальный сайт',
   keywords: '',
