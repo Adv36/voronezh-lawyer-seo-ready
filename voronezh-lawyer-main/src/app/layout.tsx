@@ -8,6 +8,7 @@ const inter = Inter({ subsets: ['latin', 'cyrillic'] });
 export const metadata: Metadata = {
   title: 'Адвокат по уголовным делам в Воронеже — воронежадвокат',
   description: 'Официальный сайт',
+  keywords: '',
 };
 
 export default function RootLayout({
@@ -18,6 +19,9 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#1ca493" />
         <link rel="icon" href="/favicon.ico" />
         <Script id="yandex-metrika" strategy="afterInteractive">
           {`
