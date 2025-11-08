@@ -51,7 +51,6 @@ const Header = () => {
           </Link>
         </nav>
 
-        {/* Mobile menu toggle button */}
         <button
           className="md:hidden flex items-center"
           onClick={toggleMobileMenu}
@@ -74,7 +73,7 @@ const Header = () => {
 
         <div className="flex flex-col items-end md:block">
           <div className="flex items-center space-x-2">
-            <Link href="mailto:ripinsky@list.ru">
+            <a href="mailto:advokat@xn--80aaebjeh9avjags2b.xn--p1ai" target="_blank" rel="noopener noreferrer">
               <Image
                 src="https://ext.same-assets.com/615341754/3844288638.svg"
                 alt="Email"
@@ -82,8 +81,8 @@ const Header = () => {
                 height={20}
                 priority
               />
-            </Link>
-            <Link href="tel:+79081328866">
+            </a>
+            <a href="tel:+79081328866">
               <Image
                 src="https://ext.same-assets.com/615341754/136602673.svg"
                 alt="Phone"
@@ -91,8 +90,8 @@ const Header = () => {
                 height={20}
                 priority
               />
-            </Link>
-            <Link href="https://wa.me/79081328866">
+            </a>
+            <a href="https://wa.me/79081328866" target="_blank" rel="noopener noreferrer">
               <Image
                 src="https://ext.same-assets.com/615341754/10197464.svg"
                 alt="WhatsApp"
@@ -100,8 +99,8 @@ const Header = () => {
                 height={20}
                 priority
               />
-            </Link>
-            <Link href="https://t.me/+79081328866">
+            </a>
+            <a href="https://t.me/+79081328866" target="_blank" rel="noopener noreferrer">
               <Image
                 src="https://ext.same-assets.com/615341754/1653797195.svg"
                 alt="Telegram"
@@ -109,7 +108,7 @@ const Header = () => {
                 height={20}
                 priority
               />
-            </Link>
+            </a>
           </div>
           <a href="tel:+79081328866" className="font-bold text-sm mt-1">
             +7 (908) 132-88-66 <span className="text-xs font-normal">(24 часа)</span>
@@ -120,7 +119,6 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile menu dropdown */}
       {mobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-md z-50 py-4 px-4 border-t border-gray-200">
           <nav className="flex flex-col space-y-4">
@@ -165,7 +163,7 @@ const Header = () => {
               />
               <span className="font-medium text-sm">+7 (908) 132-88-66</span>
             </a>
-            <a href="https://wa.me/79081328866" className="flex items-center space-x-2 text-[#774936] hover:text-[#c68b59] transition-colors py-2">
+            <a href="https://wa.me/79081328866" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-[#774936] hover:text-[#c68b59] transition-colors py-2">
               <Image
                 src="https://ext.same-assets.com/615341754/10197464.svg"
                 alt="WhatsApp"
@@ -175,7 +173,7 @@ const Header = () => {
               />
               <span className="font-medium text-sm">WhatsApp</span>
             </a>
-            <a href="https://t.me/+79081328866" className="flex items-center space-x-2 text-[#774936] hover:text-[#c68b59] transition-colors py-2">
+            <a href="https://t.me/+79081328866" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-[#774936] hover:text-[#c68b59] transition-colors py-2">
               <Image
                 src="https://ext.same-assets.com/615341754/1653797195.svg"
                 alt="Telegram"
@@ -185,7 +183,7 @@ const Header = () => {
               />
               <span className="font-medium text-sm">Telegram</span>
             </a>
-            <a href="mailto:ripinsky@list.ru" className="flex items-center space-x-2 text-[#774936] hover:text-[#c68b59] transition-colors py-2">
+            <a href="mailto:advokat@xn--80aaebjeh9avjags2b.xn--p1ai" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-[#774936] hover:text-[#c68b59] transition-colors py-2">
               <Image
                 src="https://ext.same-assets.com/615341754/3844288638.svg"
                 alt="Email"
@@ -193,7 +191,7 @@ const Header = () => {
                 height={20}
                 priority
               />
-              <span className="font-medium text-sm">ripinsky@list.ru</span>
+              <span className="font-medium text-sm">advokat@xn--80aaebjeh9avjags2b.xn--p1ai</span>
             </a>
           </div>
         </div>
