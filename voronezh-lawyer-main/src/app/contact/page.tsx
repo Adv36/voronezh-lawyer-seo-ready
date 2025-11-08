@@ -1,6 +1,7 @@
+import type { Metadata } from 'next';
 import Script from 'next/script';
 
-export const metadata = {
+export const meta Metadata = {
   title: 'Контакты — воронежадвокат',
   description: 'Контактная информация адвоката по уголовным делам в Воронеже. Офис, телефон, WhatsApp, Telegram.',
   keywords: '',
