@@ -7,7 +7,7 @@ export const metadata = {
 const links = [
   { title: 'Конституция РФ', url: 'https://www.consultant.ru/document/cons_doc_LAW_28399/' },
   { title: 'Уголовный кодекс РФ', url: 'https://www.consultant.ru/document/cons_doc_LAW_10699/' },
-  { title: 'УПК РФ', url: 'https://www.consultant.ru/document/cons_doc_LAW_13777/' },
+  { title: 'УПК РФ', url: 'https://www.consultant.ru/document/cons_doc_LAW_34481/' },
   { title: 'Постановления Пленума ВС РФ', url: 'https://www.supcourt.ru/documents/plenum/' },
 ];
 
