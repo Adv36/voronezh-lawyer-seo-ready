@@ -26,7 +26,7 @@ export default function PricePage() {
         </a>
       </div>
 
-      {/* Таблица цен (пример) */}
+      {/* Таблица цен */}
       <div className="overflow-x-auto">
         <table className="min-w-full border">
           <thead>
