@@ -17,7 +17,7 @@ export default function ContactPage() {
         <p><strong>Телефон:</strong> <a href="tel:+79081328866" className="text-blue-600 underline">+7 (908) 132-88-66</a></p>
         <p><strong>WhatsApp:</strong> <a href="https://wa.me/79081328866" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">Написать</a></p>
         <p><strong>Telegram:</strong> <a href="https://t.me/+79081328866" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">Написать</a></p>
-        <p><strong>Email:</strong> <a href="mailto:advokat@xn--80aaebjeh9avjags2b.xn--p1ai" target="_blank" className="text-blue-600 underline">advokat@xn--80aaebjeh9avjags2b.xn--p1ai</a></p>
+        <p><strong>Email:</strong> <a href="mailto:advokat@xn--80aaebjeh9avjags2b.xn--p1ai" className="text-blue-600 underline">advokat@xn--80aaebjeh9avjags2b.xn--p1ai</a></p>
       </div>
 
       <div id="ymap" style={{ width: '100%', height: '400px', borderRadius: '8px' }}></div>
