@@ -41,7 +41,7 @@ export default function ContactPage() {
         `}
       </Script>
       <Script
-        src="https://api-maps.yandex.ru/2.1/?apikey=ab304b71-d999-46f9-a347-f44190c36f0b&lang=ru_RU"
+        src="https://api-maps.yandex.ru/2.1/?apikey=ab304b71-d999-46f9-a347-f44190c36f0b&amp;lang=ru_RU"
         strategy="afterInteractive"
       />
     </div>
