@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 export const metadata = {
   title: 'Перечень услуг адвоката по уголовным делам в Воронеже - воронежадвокат',
@@ -23,16 +25,20 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <div className="container py-12">
-      <h1 className="text-3xl font-bold mb-8">Услуги</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {services.map((s, i) => (
-          <div key={i} className="border rounded p-5">
-            <h2 className="font-bold text-xl mb-3">{s.title}</h2>
-            <p>{s.desc}</p>
-          </div>
-        ))}
-      </div>
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <main className="container mx-auto px-4 py-12 flex-grow">
+        <h1 className="text-3xl font-bold mb-8">Услуги</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((s, i) => (
+            <div key={i} className="border rounded p-5 shadow-sm hover:shadow-md transition-shadow">
+              <h2 className="font-bold text-xl mb-3">{s.title}</h2>
+              <p>{s.desc}</p>
+            </div>
+          ))}
+        </div>
+      </main>
+      <Footer />
     </div>
   );
 }
