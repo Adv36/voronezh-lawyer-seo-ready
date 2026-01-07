@@ -22,20 +22,50 @@ export default function RootLayout({
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#1ca493" />
-        <link rel="icon" href="/favicon.ico" />
+
+        {/* Яндекс.Метрика — исправлено */}
         <Script id="yandex-metrika" strategy="afterInteractive">
           {`
             (function(m,e,t,r,i,k,a){
                 m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
                 m[i].l=1*new Date();
                 k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-            })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
-            ym(100540078, 'init', {webvisor:true, clickmap:true, accurateTrackBounce:true, trackLinks:true});
+            })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+            ym(100540078, "init", {
+                webvisor: true,
+                clickmap: true,
+                accurateTrackBounce: true,
+                trackLinks: true
+            });
           `}
         </Script>
+
+        {/* Google Analytics (GA4) — оставляем placeholder */}
+        <Script
+          id="gtag"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-XXXXXXXXXX'); // ← ЗАМЕНИ, КОГДА ПОДКЛЮЧИШЬ GA4
+            `
+          }}
+        />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+          strategy="afterInteractive"
+        />
+
+        {/* Fallback для Метрики */}
         <noscript>
           <div>
-            <img src="https://mc.yandex.ru/watch/100540078" style={{ position: 'absolute', left: '-9999px' }} alt="" />
+            <img
+              src="https://mc.yandex.ru/watch/100540078"
+              style={{ position: 'absolute', left: '-9999px' }}
+              alt=""
+            />
           </div>
         </noscript>
       </head>
