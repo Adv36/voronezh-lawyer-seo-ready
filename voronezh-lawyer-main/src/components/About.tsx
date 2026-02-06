@@ -58,8 +58,8 @@ const About = () => {
             <p className="text-gray-700 mb-4 font-medium">
             Благодарственное письмо АПВО, 14.10.2021
             </p>
-             <p className="text-gray-700 mb-4 font-medium">
-            Почетная грамота ФПА РФ, 18.04.2022
+            <p className="text-gray-700 mb-4 font-medium">
+             Медаль "За профессионализм", 23.10.2025
             </p>
             <p className="text-xl font-bold text-[#c68b59]">
               Звоните! Я гарантирую, что сделаю всё, чтобы помочь Вам!!!
