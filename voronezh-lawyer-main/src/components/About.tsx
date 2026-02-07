@@ -57,7 +57,7 @@ const About = () => {
           <div className="md:col-span-1 flex justify-center">
             <div className="relative w-full max-w-xs h-80 md:h-[400px]">
               <Image
-                src="https://github.com/Adv36/voronezh-lawyer/blob/main/public/uploads/ripinskiys_215_auto_jpg_5_100.jpg?raw=true"
+                src="/uploads/ripinskiys_215_auto_jpg_5_100.jpg"
                 alt="Рипинский Анатолий Анатольевич"
                 fill
                 style={{ objectFit: 'cover', objectPosition: 'center top' }}
