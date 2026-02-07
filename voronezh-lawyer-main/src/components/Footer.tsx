@@ -1,25 +1,23 @@
-import React from 'react';
-import Script from 'next/script';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-white py-8 mt-12">
+    <footer className="bg-[#774936] text-white py-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Контакты */}
           <div>
             <h3 className="text-xl font-bold mb-4">Контакты</h3>
-            <p>г. Воронеж, ул. Фридриха Энгельса, д. 48</p>
-            <p>
-              Тел.: <a href="tel:+79081328866" className="underline hover:text-blue-300">
-                +7 (908) 132-88-66
-              </a>
-            </p>
-            <p>
+            <p className="mb-2">г. Воронеж, ул. Ф. Энгельса, 48</p>
+            <p className="mb-2">Телефон: <a href="tel:+79081328866" className="underline">+7 (908) 132-88-66</a></p>
+            <div className="flex space-x-4 mt-4">
               <a
                 href="https://wa.me/79081328866"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline hover:text-blue-300 mr-4"
+                className="text-white hover:text-[#c68b59]"
+                aria-label="WhatsApp"
               >
                 WhatsApp
               </a>
@@ -27,60 +25,45 @@ export default function Footer() {
                 href="https://t.me/+79081328866"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline hover:text-blue-300"
+                className="text-white hover:text-[#c68b59]"
+                aria-label="Telegram"
               >
                 Telegram
               </a>
-            </p>
-            <p>
-              Email: <a
-                href="mailto:ripinsky@list.ru"
-                className="underline hover:text-blue-300"
-              >
-                ripinsky@list.ru
-              </a>
-            </p>
+            </div>
           </div>
 
+          {/* Навигация */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Как нас найти</h3>
-            <div id="ymap" style={{ width: '100%', height: '300px', borderRadius: '8px' }}></div>
+            <h3 className="text-xl font-bold mb-4">Навигация</h3>
+            <ul className="space-y-2">
+              <li><Link href="/" className="hover:underline">Главная</Link></li>
+              <li><Link href="/about" className="hover:underline">Обо мне</Link></li>
+              <li><Link href="/services" className="hover:underline">Услуги</Link></li>
+              <li><Link href="/contact" className="hover:underline">Контакты</Link></li>
+            </ul>
+          </div>
+
+          {/* Карта */}
+          <div>
+            <h3 className="text-xl font-bold mb-4">Как добраться</h3>
+            <div className="w-full h-48">
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?um=constructor%3Aripinskiys_215_auto_jpg_5_100&amp;source=constructor"
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                title="Карта проезда"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
         </div>
 
-        <div className="mt-8 text-center text-sm text-gray-400">
-          &copy; {new Date().getFullYear()} — Адвокат по уголовным делам в Воронеже
+        <div className="mt-8 pt-6 border-t border-gray-400 text-center text-sm">
+          &copy; {new Date().getFullYear()} Рипинский Анатолий Анатольевич. Все права защищены.
         </div>
       </div>
-
-      <Script id="ymap-init" strategy="afterInteractive">
-        {`
-          function initYmap() {
-            if (typeof ymaps === 'undefined') return;
-            var myMap = new ymaps.Map('ymap', {
-              center: [51.6725, 39.1880],
-              zoom: 16,
-              controls: []
-            });
-            var myPlacemark = new ymaps.Placemark([51.6725, 39.1880], {
-              balloonContent: '<strong>Офис адвоката</strong><br>г. Воронеж, ул. Фридриха Энгельса, д. 48'
-            }, {
-              preset: 'islands#icon',
-              iconColor: '#1ca493'
-            });
-            myMap.geoObjects.add(myPlacemark);
-          }
-          if (typeof ymaps !== 'undefined') {
-            ymaps.ready(initYmap);
-          }
-        `}
-      </Script>
-
-      <Script
-        id="ymap-script"
-        src="https://api-maps.yandex.ru/2.1/?apikey=ab304b71-d999-46f9-a347-f44190c36f0b&lang=ru_RU"
-        strategy="afterInteractive"
-      />
     </footer>
   );
 }
