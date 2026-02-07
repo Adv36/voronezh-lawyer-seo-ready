@@ -1,5 +1,11 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Контакты | Адвокат Рипинский А.А. — Воронеж',
+  description: 'Связаться с адвокатом: WhatsApp, Telegram, телефон +7 (908) 132-88-66. Офис в Воронеже, ул. Ф. Энгельса, 48.',
+};
 
 export default function ContactPage() {
   return (
@@ -16,7 +22,6 @@ export default function ContactPage() {
             Свяжитесь со мной любым удобным способом. Я отвечаю на все обращения максимально оперативно.
           </p>
 
-          {/* Форма обратной связи */}
           <form
             name="contact"
             method="POST"
