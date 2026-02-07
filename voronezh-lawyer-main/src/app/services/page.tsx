@@ -1,41 +1,38 @@
-import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { Metadata } from 'next';
 
-export const metadata = {
-  title: 'Перечень услуг адвоката по уголовным делам в Воронеже - воронежадвокат',
-  description: 'Ознакомьтесь с услугами адвоката по уголовным делам в Воронеже на сайте воронежадвокат. Звоните 📞: +7 (908) 132-88-66',
-  keywords: '',
+export const metadata: Metadata = {
+  title: 'Услуги | Адвокат по уголовным делам — Воронеж',
+  description: 'Защита по уголовным делам: консультации, представительство в суде, обжалование приговоров. Воронеж и область.',
 };
-
-const services = [
-  {
-    title: 'Защита на стадии досудебного производства',
-    desc: 'Участие в допросах, обысках, выемках, обжалование решений следователя.'
-  },
-  {
-    title: 'Защита в суде первой инстанции',
-    desc: 'Полное участие в судебных заседаниях, ходатайства, исследование доказательств.'
-  },
-  {
-    title: 'Обжалование приговоров',
-    desc: 'Подготовка и подача апелляционных и кассационных жалоб.'
-  }
-];
 
 export default function ServicesPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="container mx-auto px-4 py-12 flex-grow">
-        <h1 className="text-3xl font-bold mb-8">Услуги</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((s, i) => (
-            <div key={i} className="border rounded p-5 shadow-sm hover:shadow-md transition-shadow">
-              <h2 className="font-bold text-xl mb-3">{s.title}</h2>
-              <p>{s.desc}</p>
-            </div>
-          ))}
+      <main className="flex-grow container mx-auto px-4 py-12">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex items-center mb-8">
+            <div className="w-8 h-0.5 bg-[#774936] mr-4"></div>
+            <h1 className="text-2xl md:text-3xl font-bold uppercase text-[#774936]">Услуги</h1>
+          </div>
+
+          <div className="space-y-6 text-gray-700">
+            <p>
+              Я предоставляю полный спектр юридических услуг по уголовным делам:
+            </p>
+            <ul className="list-disc list-inside space-y-2">
+              <li>Консультации по уголовному праву</li>
+              <li>Защита подозреваемых и обвиняемых на всех стадиях процесса</li>
+              <li>Представительство интересов потерпевших и свидетелей</li>
+              <li>Обжалование решений суда и следствия</li>
+              <li>Подача жалоб в Европейский суд по правам человека</li>
+            </ul>
+            <p>
+              Работаю в Воронеже, Воронежской области и других регионах РФ.
+            </p>
+          </div>
         </div>
       </main>
       <Footer />
