@@ -19,9 +19,10 @@ export default function ContactPage() {
           </div>
 
           <p className="mb-6 md:mb-8 text-gray-700 text-sm md:text-base">
-            Свяжитесь со мной любым удобным способом. Я отвечаю на все обращения максимально оперативно.
+            Свяжитесь со мной любым удобным способом. Я отвечаю на все обращения в течение 24 часов.
           </p>
 
+          {/* Форма обратной связи */}
           <form
             name="contact"
             method="POST"
@@ -96,7 +97,24 @@ export default function ContactPage() {
             </button>
           </form>
 
-          <div className="mt-8 md:mt-12 text-center">
+          {/* Карта */}
+          <div className="mt-10">
+            <h3 className="text-xl font-bold mb-4 text-[#774936]">Как нас найти</h3>
+            <div className="w-full h-64 md:h-80 rounded-lg overflow-hidden">
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?ll=39.2089%2C51.6755&z=15&l=map&pt=39.2089%2C51.6755%2Cpm2dgl&text=%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D0%B5%D0%B6%2C+%D1%83%D0%BB.%20%D0%A4.%20%D0%AD%D0%BD%D0%B3%D0%B5%D0%BB%D1%8C%D1%81%D0%B0%2C+48"
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                title="Карта: Воронеж, ул. Ф. Энгельса, 48"
+                allowFullScreen
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+
+          {/* Альтернативные контакты */}
+          <div className="mt-8 text-center">
             <p className="text-gray-700 mb-3 md:mb-4 text-sm md:text-base">Или свяжитесь напрямую:</p>
             <div className="flex flex-wrap justify-center gap-3 md:gap-6">
               <a
