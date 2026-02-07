@@ -24,7 +24,7 @@ export default function Footer() {
                 WhatsApp
               </a>
               <a
-                href="https://t.me/79081328866"
+                href="https://t.me/+79081328866"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline hover:text-blue-300"
