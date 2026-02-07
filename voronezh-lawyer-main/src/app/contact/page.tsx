@@ -1,100 +1,130 @@
-import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-
-export const metadata = {
-  title: 'Контакты адвоката по уголовным делам в Воронеже — воронежадвокат',
-  description: 'Свяжитесь с адвокатом по уголовным делам в Воронеже: телефон, WhatsApp, Telegram, email, адрес офиса. Звоните 📞: +7 (908) 132-88-66',
-};
 
 export default function ContactPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="container mx-auto px-4 py-12 flex-grow">
-        <h1 className="text-3xl font-bold mb-8">Контакты</h1>
+      <main className="flex-grow container mx-auto px-4 py-12">
+        <div className="max-w-3xl mx-auto">
+          <div className="flex items-center mb-8">
+            <div className="w-8 h-0.5 bg-[#774936] mr-4"></div>
+            <h1 className="text-2xl md:text-3xl font-bold uppercase text-[#774936]">Контакты</h1>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {/* Контактная информация */}
-          <div>
-            <h2 className="text-2xl font-bold mb-4">Как со мной связаться</h2>
-            <p className="mb-2">📍 <strong>Адрес:</strong> г. Воронеж, ул. Фридриха Энгельса, д. 48</p>
-            <p className="mb-2">📞 <strong>Телефон:</strong> <a href="tel:+79081328866" className="text-blue-600 hover:underline">+7 (908) 132-88-66</a></p>
-            <p className="mb-4">✉️ <strong>Email:</strong> <a href="mailto:ripinsky@list.ru" className="text-blue-600 hover:underline">ripinsky@list.ru</a></p>
+          <p className="mb-8 text-gray-700">
+            Свяжитесь со мной любым удобным способом. Я отвечаю на все обращения максимально оперативно.
+          </p>
 
-            <div className="flex flex-wrap gap-2">
+          {/* Форма обратной связи */}
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            className="space-y-6 bg-white p-6 rounded-lg shadow-md"
+          >
+            {/* Honeypot — защита от ботов */}
+            <input type="hidden" name="form-name" value="contact" />
+            <p className="hidden">
+              <label>
+                Don’t fill this out if you’re human: <input name="bot-field" />
+              </label>
+            </p>
+
+            {/* Имя */}
+            <div>
+              <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
+                Ваше имя *
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#c68b59]"
+              />
+            </div>
+
+            {/* Телефон */}
+            <div>
+              <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">
+                Телефон *
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+                placeholder="+7 (900) 123-45-67"
+                className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#c68b59]"
+              />
+            </div>
+
+            {/* Email (опционально) */}
+            <div>
+              <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#c68b59]"
+              />
+            </div>
+
+            {/* Сообщение */}
+            <div>
+              <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
+                Сообщение *
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows={5}
+                className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#c68b59]"
+              ></textarea>
+            </div>
+
+            {/* Кнопка отправки */}
+            <button
+              type="submit"
+              className="bg-[#774936] hover:bg-[#c68b59] text-white font-bold py-3 px-6 rounded transition"
+            >
+              Отправить сообщение
+            </button>
+          </form>
+
+          {/* Альтернативные контакты */}
+          <div className="mt-12 text-center">
+            <p className="text-gray-700 mb-4">Или свяжитесь напрямую:</p>
+            <div className="flex justify-center space-x-6">
               <a
                 href="https://wa.me/79081328866"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
+                className="text-green-600 hover:underline font-medium"
               >
                 WhatsApp
               </a>
               <a
-                href="https://t.me/79081328866"
+                href="https://t.me/+79081328866"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                className="text-blue-600 hover:underline font-medium"
               >
                 Telegram
               </a>
+              <a
+                href="tel:+79081328866"
+                className="text-gray-700 hover:underline font-medium"
+              >
+                +7 (908) 132-88-66
+              </a>
             </div>
           </div>
-
-          {/* Карта */}
-          <div>
-            <h2 className="text-2xl font-bold mb-4">Как нас найти</h2>
-            <div id="ymap" className="w-full h-64 rounded-lg bg-gray-200 flex items-center justify-center">
-              <span className="text-gray-500">Карта загружается на сайте</span>
-            </div>
-            <p className="mt-2 text-sm text-gray-500">
-              Карта отображается после публикации на сайте (не работает локально).
-            </p>
-          </div>
-        </div>
-
-        {/* Форма обратной связи */}
-        <div>
-          <h2 className="text-2xl font-bold mb-4">Форма обратной связи</h2>
-          <form className="space-y-4 max-w-lg">
-            <div>
-              <label htmlFor="name" className="block mb-1">Ваше имя</label>
-              <input
-                type="text"
-                id="name"
-                className="w-full px-3 py-2 border rounded"
-                placeholder="Иван Иванов"
-              />
-            </div>
-            <div>
-              <label htmlFor="phone" className="block mb-1">Телефон</label>
-              <input
-                type="tel"
-                id="phone"
-                className="w-full px-3 py-2 border rounded"
-                placeholder="+7 (900) 123-45-67"
-              />
-            </div>
-            <div>
-              <label htmlFor="message" className="block mb-1">Сообщение</label>
-              <textarea
-                id="message"
-                rows={4}
-                className="w-full px-3 py-2 border rounded"
-                placeholder="Опишите вашу ситуацию кратко..."
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700"
-            >
-              Отправить
-            </button>
-          </form>
-          <p className="mt-2 text-sm text-gray-500">
-            Я отвечаю в течение 30 минут. Либо напишите сразу в WhatsApp или Telegram.
-          </p>
         </div>
       </main>
       <Footer />
