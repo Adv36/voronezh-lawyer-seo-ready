@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -49,7 +48,7 @@ export default function Footer() {
             <h3 className="text-xl font-bold mb-4">Как добраться</h3>
             <div className="w-full h-64 md:h-80 rounded-lg overflow-hidden">
               <iframe
-                src="https://yandex.ru/map-widget/v1/?ll=39.2089%2C51.6755&z=15&l=map&pt=39.2089%2C51.6755%2Cpm2dgl&mode=search&text=%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D0%B5%D0%B6%2C+%D1%83%D0%BB.%20%D0%A4.%20%D0%AD%D0%BD%D0%B3%D0%B5%D0%BB%D1%8C%D1%81%D0%B0%2C+48"
+                src="https://yandex.ru/map-widget/v1/?ll=39.2089%2C51.6755&z=15&l=map&pt=39.2089%2C51.6755%2Cpm2dgl&text=%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D0%B5%D0%B6%2C+%D1%83%D0%BB.%20%D0%A4.%20%D0%AD%D0%BD%D0%B3%D0%B5%D0%BB%D1%8C%D1%81%D0%B0%2C+48"
                 width="100%"
                 height="100%"
                 frameBorder="0"
