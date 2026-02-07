@@ -60,6 +60,7 @@ const About = () => {
                 src="/uploads/ripinskiys_215_auto_jpg_5_100.jpg"
                 alt="Рипинский Анатолий Анатольевич"
                 fill
+                unoptimized
                 style={{ objectFit: 'cover', objectPosition: 'center top' }}
                 className="rounded-lg"
                 priority
