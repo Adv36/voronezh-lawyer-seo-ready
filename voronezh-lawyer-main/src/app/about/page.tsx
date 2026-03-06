@@ -1,18 +1,12 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import AboutContent from '../components/About';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "Обо мне",
-  description: "Биография адвоката Рипинского А.А.",
-};
 
 export default function AboutPage() {
   return (
-    <div>
+    <div className="min-h-screen flex flex-col">
       <Header />
-      <main>Обо мне</main>
+      <main className="flex-grow">About</main>
       <Footer />
     </div>
   );
