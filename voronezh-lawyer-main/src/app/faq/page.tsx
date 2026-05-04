@@ -1,6 +1,6 @@
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import Faq from '@/components/Faq';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import Faq from '../../components/Faq';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
