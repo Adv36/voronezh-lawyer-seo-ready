@@ -29,7 +29,7 @@ export default function ClientBody({ children }: { children: React.ReactNode }) 
   }, []);
 
   return (
-    <body className="relative">
+    <>
       {children}
 
       {/* Floating WhatsApp button */}
@@ -52,6 +52,6 @@ export default function ClientBody({ children }: { children: React.ReactNode }) 
         </div>
         <span className="ml-2 text-white font-medium hidden sm:inline">Написать в WhatsApp</span>
       </a>
-    </body>
+    </>
   );
 }
