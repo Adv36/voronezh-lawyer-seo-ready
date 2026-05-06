@@ -1,10 +1,9 @@
 [build]
   command = "npm run build"
   publish = ".next"
-
-[build.environment]
-  NEXT_TELEMETRY_DISABLED = "1"
+  environment = { NODE_VERSION = "18.20.8" }
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
-  
+  [plugins.inputs]
+  forms = true

@@ -32,7 +32,7 @@ export default function ContactPage() {
             <input type="hidden" name="form-name" value="contact" />
             <p className="hidden">
               <label>
-                Don’t fill this out if you’re human: <input name="bot-field" />
+                Don't fill this out if you're human: <input name="bot-field" />
               </label>
             </p>
 
