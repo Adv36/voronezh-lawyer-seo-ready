@@ -2,13 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: [
-      'raw.githubusercontent.com',
-      'github.com',
-      'user-images.githubusercontent.com',
-      'ext.same-assets.com'
-    ]
-  }
+    remotePatterns: [],
+  },
 };
 
 module.exports = nextConfig;
