@@ -4,4 +4,4 @@
   environment = { NODE_VERSION = "18.20.8" }
 
 [[plugins]]
-  package = "@netlify/plugin-nextjs@4.9.0"
+  package = "@netlify/plugin-nextjs"
