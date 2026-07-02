@@ -22,82 +22,63 @@ export default function ContactPage() {
             Свяжитесь со мной любым удобным способом. Я отвечаю на все обращения в течение 24 часов.
           </p>
 
-          {/* УБРАНЫ АТРИБУТЫ data-netlify и data-netlify-honeypot */}
-          <form
-            name="contact"
-            method="POST"
-            className="space-y-5 md:space-y-6 bg-white p-4 md:p-6 rounded-lg shadow-md"
-          >
-            {/* УБРАНО скрытое поле form-name и bot-field */}
-
+          <div className="bg-white p-4 md:p-6 rounded-lg shadow-md space-y-4">
             <div>
-              <label htmlFor="name" className="block text-gray-700 font-medium mb-1.5 md:mb-2 text-sm md:text-base">
-                Ваше имя *
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                className="w-full px-3 md:px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#c68b59] text-sm md:text-base"
-              />
+              <h3 className="font-bold text-[#774936] mb-2">Адрес офиса:</h3>
+              <p className="text-gray-700">г. Воронеж, ул. Ф. Энгельса, 48</p>
             </div>
 
             <div>
-              <label htmlFor="phone" className="block text-gray-700 font-medium mb-1.5 md:mb-2 text-sm md:text-base">
-                Телефон *
-              </label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                required
-                placeholder="+7 (900) 123-45-67"
-                className="w-full px-3 md:px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#c68b59] text-sm md:text-base"
-              />
+              <h3 className="font-bold text-[#774936] mb-2">Телефон:</h3>
+              <a href="tel:+79081328866" className="text-[#774936] hover:underline text-lg font-medium">
+                +7 (908) 132-88-66
+              </a>
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-gray-700 font-medium mb-1.5 md:mb-2 text-sm md:text-base">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                className="w-full px-3 md:px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#c68b59] text-sm md:text-base"
-              />
+              <h3 className="font-bold text-[#774936] mb-2">Мессенджеры:</h3>
+              <div className="flex gap-4">
+                <a
+                  href="https://wa.me/79081328866"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-600 hover:underline font-medium"
+                >
+                  WhatsApp
+                </a>
+                <a
+                  href="https://t.me/+79081328866"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:underline font-medium"
+                >
+                  Telegram
+                </a>
+              </div>
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-gray-700 font-medium mb-1.5 md:mb-2 text-sm md:text-base">
-                Сообщение *
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                required
-                rows={4}
-                className="w-full px-3 md:px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#c68b59] text-sm md:text-base"
-              ></textarea>
+              <h3 className="font-bold text-[#774936] mb-2">Email:</h3>
+              <a href="mailto:ripinsky@list.ru" className="text-[#774936] hover:underline">
+                ripinsky@list.ru
+              </a>
             </div>
 
-            <button
-              type="submit"
-              className="w-full md:w-auto bg-[#774936] hover:bg-[#c68b59] text-white font-bold py-2.5 px-6 rounded transition text-sm md:text-base"
-            >
-              Отправить сообщение
-            </button>
-          </form>
+            <div className="mt-6">
+              <h3 className="font-bold text-[#774936] mb-2">Режим работы:</h3>
+              <p className="text-gray-700">Пн-Пт: 9:00 - 18:00</p>
+              <p className="text-gray-700">Сб-Вс: по предварительной записи</p>
+            </div>
+          </div>
 
-          <div className="mt-8 md:mt-12 text-center">
-            <p className="text-gray-700 mb-3 md:mb-4 text-sm md:text-base">Или свяжитесь напрямую:</p>
+          <div className="mt-8 text-center">
+            <p className="text-gray-700 mb-3">Или свяжитесь напрямую:</p>
             <div className="flex flex-wrap justify-center gap-3 md:gap-6">
               <a
                 href="https://wa.me/79081328866"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-green-600 hover:underline font-medium text-sm md:text-base"
+                className="text-green-600 hover:underline font-medium"
               >
                 WhatsApp
               </a>
@@ -105,13 +86,13 @@ export default function ContactPage() {
                 href="https://t.me/+79081328866"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:underline font-medium text-sm md:text-base"
+                className="text-blue-600 hover:underline font-medium"
               >
                 Telegram
               </a>
               <a
                 href="tel:+79081328866"
-                className="text-gray-700 hover:underline font-medium text-sm md:text-base"
+                className="text-gray-700 hover:underline font-medium"
               >
                 +7 (908) 132-88-66
               </a>
