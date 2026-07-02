@@ -1,7 +1,6 @@
 "use client";
 
 import Link from 'next/link';
-import Image from 'next/image';
 
 const Services = () => {
   return (
@@ -18,12 +17,12 @@ const Services = () => {
           {/* Service 1 */}
           <div className="bg-[#774936] rounded-xl p-4 md:p-6 text-white flex flex-col h-full">
             <div className="mb-3 md:mb-4">
-              <Image
+              <img
                 src="https://ext.same-assets.com/615341754/409506952.svg"
                 alt="Для физических лиц"
                 width={40}
                 height={40}
-                priority
+                className="w-10 h-10"
               />
             </div>
             <h3 className="text-[#e9b872] font-bold text-base md:text-lg mb-2">Для физических лиц (граждан)</h3>
@@ -42,12 +41,12 @@ const Services = () => {
           {/* Service 2 */}
           <div className="bg-[#774936] rounded-xl p-4 md:p-6 text-white flex flex-col h-full">
             <div className="mb-3 md:mb-4">
-              <Image
+              <img
                 src="https://ext.same-assets.com/615341754/3532288941.svg"
                 alt="Для юридических лиц"
                 width={40}
                 height={40}
-                priority
+                className="w-10 h-10"
               />
             </div>
             <h3 className="text-[#e9b872] font-bold text-base md:text-lg mb-2">Для юридических лиц (защита бизнеса)</h3>
@@ -63,12 +62,12 @@ const Services = () => {
           {/* Service 3 */}
           <div className="bg-[#774936] rounded-xl p-4 md:p-6 text-white flex flex-col h-full">
             <div className="mb-3 md:mb-4">
-              <Image
+              <img
                 src="https://ext.same-assets.com/615341754/2328365934.svg"
                 alt="Абонентское обслуживание"
                 width={40}
                 height={40}
-                priority
+                className="w-10 h-10"
               />
             </div>
             <h3 className="text-[#e9b872] font-bold text-base md:text-lg mb-2">Абонентское обслуживание</h3>
@@ -90,43 +89,39 @@ const Services = () => {
             <p className="text-xl md:text-2xl font-bold text-[#c68b59] mb-4 md:mb-6">+7 (908) 132-88-66</p>
             <div className="flex justify-center space-x-3 md:space-x-4">
               <Link href="tel:+79081328866">
-                <Image
+                <img
                   src="https://ext.same-assets.com/615341754/136602673.svg"
                   alt="Phone"
                   width={36}
                   height={36}
-                  className="bg-white p-2 rounded-full hover:bg-gray-100"
-                  priority
+                  className="bg-white p-2 rounded-full hover:bg-gray-100 w-9 h-9"
                 />
               </Link>
               <Link href="mailto:ripinsky@list.ru">
-                <Image
+                <img
                   src="https://ext.same-assets.com/615341754/3844288638.svg"
                   alt="Email"
                   width={36}
                   height={36}
-                  className="bg-white p-2 rounded-full hover:bg-gray-100"
-                  priority
+                  className="bg-white p-2 rounded-full hover:bg-gray-100 w-9 h-9"
                 />
               </Link>
               <Link href="https://wa.me/79081328866">
-                <Image
+                <img
                   src="https://ext.same-assets.com/615341754/10197464.svg"
                   alt="WhatsApp"
                   width={36}
                   height={36}
-                  className="bg-white p-2 rounded-full hover:bg-gray-100"
-                  priority
+                  className="bg-white p-2 rounded-full hover:bg-gray-100 w-9 h-9"
                 />
               </Link>
               <Link href="https://t.me/+79081328866">
-                <Image
+                <img
                   src="https://ext.same-assets.com/615341754/1653797195.svg"
                   alt="Telegram"
                   width={36}
                   height={36}
-                  className="bg-white p-2 rounded-full hover:bg-gray-100"
-                  priority
+                  className="bg-white p-2 rounded-full hover:bg-gray-100 w-9 h-9"
                 />
               </Link>
             </div>
