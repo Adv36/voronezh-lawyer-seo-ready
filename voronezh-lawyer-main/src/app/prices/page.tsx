@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "Цены на услуги адвоката | Рипинский А.А. — Воронеж",
-  description: "Стоимость юридических услуг по уголовным делам: консультация, защита подозреваемого, представительство потерпевшего, обжалование приговора.",
+  description: "Стоимость юридических услуг по уголовным делам.",
 };
 
 const PriceSection = ({ title, items }: { title: string; items: { service: string; price: string }[] }) => (
