@@ -22,19 +22,13 @@ export default function ContactPage() {
             Свяжитесь со мной любым удобным способом. Я отвечаю на все обращения в течение 24 часов.
           </p>
 
+          {/* УБРАНЫ АТРИБУТЫ data-netlify и data-netlify-honeypot */}
           <form
             name="contact"
             method="POST"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
             className="space-y-5 md:space-y-6 bg-white p-4 md:p-6 rounded-lg shadow-md"
           >
-            <input type="hidden" name="form-name" value="contact" />
-            <p className="hidden">
-              <label>
-                Don't fill this out if you're human: <input name="bot-field" />
-              </label>
-            </p>
+            {/* УБРАНО скрытое поле form-name и bot-field */}
 
             <div>
               <label htmlFor="name" className="block text-gray-700 font-medium mb-1.5 md:mb-2 text-sm md:text-base">
