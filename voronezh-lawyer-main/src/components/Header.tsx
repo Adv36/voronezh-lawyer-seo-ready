@@ -7,6 +7,8 @@ export default function Header() {
           <ul className="flex space-x-6">
             <li><a href="/" className="text-[#774936] hover:text-gray-700">О нас</a></li>
             <li><a href="/services" className="text-[#774936] hover:text-gray-700">Услуги</a></li>
+            <li><a href="/prices" className="text-[#774936] hover:text-gray-700">Цены</a></li>
+            <li><a href="/faq" className="text-[#774936] hover:text-gray-700">FAQ</a></li>
             <li><a href="/contact" className="text-[#774936] hover:text-gray-700">Контакты</a></li>
           </ul>
         </nav>
