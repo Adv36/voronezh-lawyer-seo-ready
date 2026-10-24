@@ -6,6 +6,7 @@ export default function Hero() {
       <div className="container mx-auto px-4 text-center">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
           Адвокат в Воронеже
+          РИПИНСКИЙ АНАТОЛИЙ АНАТОЛЬЕВИЧ
         </h1>
         <p className="text-lg md:text-xl mb-6 md:mb-8 max-w-3xl mx-auto">
           Защита по уголовным делам. Профессионально, надёжно, конфиденциально.
