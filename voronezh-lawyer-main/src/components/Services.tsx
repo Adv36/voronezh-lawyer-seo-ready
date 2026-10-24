@@ -18,7 +18,7 @@ const Services = () => {
           <div className="bg-[#774936] rounded-xl p-4 md:p-6 text-white flex flex-col h-full">
             <h3 className="text-[#e9b872] font-bold text-base md:text-lg mb-2">Для физических лиц (граждан)</h3>
             <ul className="text-xs md:text-sm space-y-1 md:space-y-2 mb-4 md:mb-6 flex-grow">
-              <li>Защита по административным делам, делам о ДТП и угоне</li>
+              <li>Защита по уголовным и административным делам, делам о ДТП и угоне</li>
               <li>Защита бизнеса и его сотрудников</li>
               <li>Защита прав потерпевшего</li>
               <li>Обжалование приговора</li>
