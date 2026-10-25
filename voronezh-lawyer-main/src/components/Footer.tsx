@@ -43,15 +43,15 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Карта */}
+          {/* Карта (исправленная надежная ссылка) */}
           <div>
             <h3 className="text-xl font-bold mb-4">Как добраться</h3>
-            <div className="w-full h-64 md:h-80 rounded-lg overflow-hidden">
+            <div className="w-full h-64 md:h-80 rounded-lg overflow-hidden bg-gray-200">
               <iframe
-                src="https://yandex.ru/map-widget/v1/?ll=39.2089%2C51.6755&z=15&l=map&pt=39.2089%2C51.6755%2Cpm2dgl&text=%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D0%B5%D0%B6%2C+%D1%83%D0%BB.%20%D0%A4.%20%D0%AD%D0%BD%D0%B3%D0%B5%D0%BB%D1%8C%D1%81%D0%B0%2C+48"
+                src="https://yandex.ru/map-widget/v1/?text=Воронеж,+ул.+Ф.+Энгельса,+48&z=17&l=map"
                 width="100%"
                 height="100%"
-                frameBorder="0"
+                style={{ border: 0 }}
                 title="Карта: Воронеж, ул. Ф. Энгельса, 48"
                 allowFullScreen
                 loading="lazy"
