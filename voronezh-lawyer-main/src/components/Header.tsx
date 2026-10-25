@@ -4,11 +4,11 @@ export default function Header() {
       <div className="container mx-auto flex justify-between items-center">
         <h1 className="text-xl font-bold text-[#774936]">Адвокат в Воронеже</h1>
         <nav>
-          <ul className="flex space-x-6">
-            <li><a href="/" className="text-[#774936] hover:text-gray-700">Обо мне</a></li>
+          <ul className="flex space-x-4 md:space-x-6 text-sm md:text-base">
+            <li><a href="/" className="text-[#774936] hover:text-gray-700">О нас</a></li>
             <li><a href="/services" className="text-[#774936] hover:text-gray-700">Услуги</a></li>
             <li><a href="/prices" className="text-[#774936] hover:text-gray-700">Цены</a></li>
-            <li><a href="/faq" className="text-[#774936] hover:text-gray-700">FAQ</a></li>
+            <li><a href="/useful" className="text-[#774936] hover:text-gray-700">Полезное</a></li>
             <li><a href="/contact" className="text-[#774936] hover:text-gray-700">Контакты</a></li>
           </ul>
         </nav>
